@@ -1,0 +1,392 @@
+html {
+  overflow: hidden;
+  height: 100%;
+  cursor: url("../assets/images/default-cursor.png"), auto !important;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+ul,
+li {
+  padding-left: 0;
+  list-style: none;
+}
+
+.click-cursor {
+  cursor: url("../assets/images/click-cursor.png"), auto !important;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.castle-overlay {
+  z-index: 1000;
+  max-height: 100vh;
+  background-color: #131313;
+  overflow: hidden;
+}
+
+.castle-bg {
+  position: relative;
+  background-image: url("../assets/images/castle-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-width: 555px;
+  min-height: 585px;
+  transition: all 0s;
+  transform-origin: center;
+}
+
+.fire-wrap {
+  overflow: hidden;
+  width: 12px;
+  height: 15px;
+  background-color: transparent;
+  position: absolute;
+}
+
+.fire-wrap-1 {
+  bottom: 128px;
+  right: 132px;
+}
+
+.fire-wrap-2 {
+  bottom: 128px;
+  right: 59px;
+}
+
+.fire-wrap-3 {
+  top: 196px;
+  right: 75px;
+}
+
+.fire {
+  background-image: url("../assets/images/fire.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 100%;
+  transform: translateX(0);
+  animation: translateAnimation steps(8) normal 1s infinite;
+}
+
+.hall-light-wrap {
+  overflow: hidden;
+  width: 12px;
+  height: 3px;
+  background-color: transparent;
+  position: absolute;
+  top: 105.5px;
+}
+
+.hall-light-wrap-1 {
+  right: 112px;
+}
+
+.hall-light-wrap-2 {
+  right: 78px;
+}
+
+.hall-light-wrap-3 {
+  right: 44px;
+}
+
+.hall-light {
+  background-image: url("../assets/images/halllight.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 136px;
+  animation: translateAnimation steps(8) normal 2s infinite;
+}
+
+.torch-wrap {
+  overflow: hidden;
+  width: 12px;
+  height: 15px;
+  background-color: transparent;
+  position: absolute;
+  top: 56px;
+}
+
+.torch-wrap-1 {
+  right: 97.5px;
+}
+
+.torch-wrap-2 {
+  right: 63.5px;
+}
+
+.torch {
+  background-image: url("../assets/images/torch.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 125px;
+  animation: translateAnimation steps(8) normal 1s infinite;
+}
+
+.beast-wrap-1 {
+  overflow: hidden;
+  width: 23px;
+  height: 20px;
+  position: absolute;
+  top: 91.4px;
+  left: 74.9px;
+}
+
+.beast-1 {
+  background-image: url("../assets/images/beast1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 200px;
+  animation: translateAnimation steps(8) normal 2s infinite;
+}
+
+.beast-wrap-2 {
+  overflow: hidden;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 80px;
+  left: 118.9px;
+}
+
+.beast-2 {
+  background-image: url("../assets/images/beast2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 92px;
+  animation: translateAnimation steps(8) normal 3s infinite;
+}
+
+.throne-light-wrap {
+  overflow: hidden;
+  width: 79px;
+  height: 11px;
+  position: absolute;
+  top: 157.5px;
+  left: 238.9px;
+}
+
+.throne-light {
+  background-image: url("../assets/images/thronelight.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 634px;
+  animation: translateAnimation steps(8) normal 3s infinite;
+}
+
+.jester-wrap {
+  overflow: hidden;
+  width: 14px;
+  height: 19px;
+}
+
+.jester-container {
+  position: absolute;
+  bottom: 137px;
+  left: 166px;
+}
+
+.jester {
+  background-image: url("../assets/images/jester.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 17px;
+  width: 1012px;
+  animation: translateAnimation steps(58) normal 2.2s infinite;
+}
+
+@keyframes translateAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.land-auction-btn {
+  position: absolute;
+  top: 184.5px;
+  left: 83px;
+  height: 43px;
+  width: 43px;
+}
+
+.jester-grandle-btn {
+  position: absolute;
+  top: -11px;
+  right: -16px;
+  height: 43px;
+  width: 43px;
+}
+
+.close-btn {
+  background-image: url("../assets/images/modal/close-modal-btn.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 26px;
+  right: 29px;
+  width: 40px;
+  height: 40px;
+}
+
+.close-btn:hover {
+  opacity: 0.9;
+}
+
+.game-border {
+  position: relative;
+  background-color: #ffe3bd;
+  background-image: url("../assets/images/borders/basic-left.png"),
+    url("../assets/images/borders/basic-right.png"),
+    url("../assets/images/borders/fancy-top.png"),
+    url("../assets/images/borders/basic-bottom.png");
+  background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
+  background-position: 0 0, 100% 0, 0 0, 0 100%;
+  border-radius: 40px;
+}
+
+.game-border::before {
+  content: "";
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  height: 100%;
+  image-rendering: pixelated;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.game-border.basic::before {
+  background-image: url("../assets/images/borders/basic-top-left.png"),
+    url("../assets/images/borders/basic-top-right.png"),
+    url("../assets/images/borders/basic-bottom-left.png"),
+    url("../assets/images/borders/basic-bottom-right.png");
+}
+
+.game-border.fancy::before {
+  background-image: url("../assets/images/borders/fancy-top-left.png"),
+    url("../assets/images/borders/fancy-top-right.png"),
+    url("../assets/images/borders/basic-bottom-left.png"),
+    url("../assets/images/borders/basic-bottom-right.png");
+}
+
+.green-button {
+  position: relative;
+  background-color: #066c45;
+  background-image: url("../assets/images/borders/btn-side.png"),
+    url("../assets/images/borders/btn-side.png");
+  background-repeat: repeat-y, repeat-y;
+  background-position: 0 0, 100% 0;
+  border-radius: 8px;
+  color: #ffe3bc;
+  font-size: 18px;
+  margin: 2px 0;
+  min-width: 120px;
+  transition: background-color 0.3s ease-in;
+  padding: 6px 24px;
+}
+
+.green-button:hover {
+  background-color: #00984b;
+  transition: background-color 0.3s ease-in;
+}
+
+.green-button::after,
+.green-button::before {
+  image-rendering: pixelated;
+  content: "";
+  position: absolute;
+  height: calc(100% + 6px);
+}
+
+.green-button::before {
+  top: -2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: calc(100% - 6px);
+  border-radius: 8px;
+  background-image: url("../assets/images/borders/btn-top.png"),
+    url("../assets/images/borders/btn-btm.png");
+  background-position: top, bottom;
+  background-repeat: repeat-x, repeat-x;
+}
+
+.green-button::after {
+  top: -2px;
+  left: 0;
+  width: 100%;
+  background-image: url("../assets/images/borders/btn-top-left.png"),
+    url("../assets/images/borders/btn-top-right.png"),
+    url("../assets/images/borders/btn-btm-left.png"),
+    url("../assets/images/borders/btn-btm-right.png");
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.modal-body button {
+  min-width: 200px;
+  margin: 5px 0;
+}
+
+hr {
+  width: 100%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid rgba(62, 31, 5, 0.1);
+  margin: 1em 0 0;
+}
+
+.game-scroll-bar::-webkit-scrollbar {
+  width: 6px;
+  padding: 3px 0;
+}
+
+.game-scroll-bar::-webkit-scrollbar-track {
+  background-color: #eecba1;
+  width: 4px;
+  border-radius: 6px;
+  border: 2px solid #eccca4;
+}
+
+.game-scroll-bar::-webkit-scrollbar-thumb {
+  background-color: #ffe3bc;
+  border-radius: 16px;
+  margin: 2px 0;
+  width: 6px;
+  border-radius: 16px;
+}
